@@ -1,25 +1,55 @@
 [
   {
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "tobacco",
+    "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
-    "identifier": "ark:tobacco",
-    "version": "1.0",
-    "title": "QALY Gain By Stop Using Tobacco",
-    "contributors": "Dr. John Doe",
-    "description": "Quality-Adjusted Life Year Gain By Stop Using Tobacco",
-    "keywords": [
-      "QALY",
-      "Tobacco"
-    ],
+    "dc:title": "QALY Gain By Stop Using Tobacco",
+    "dc:identifier": "ark:tobacco",
+    "version": "1.1",
+    "dc:description": "Quality-Adjusted Life Year Gain By Stop Using Tobacco",
+    "koio:contributors" : "Dr. John Doe",
+    "koio:keywords" : [ "QALY", "Tobacco" ],
     "citation":"https://pubmed.ncbi.nlm.nih.gov/a234567/",
-    "hasServiceSpecification": "service.yaml",
-    "hasDeploymentSpecification": "deployment.yaml",
-    "hasPayload": [
-      "src/index.js"
+    "koio:hasService": [
+      {
+        "@type": "API",
+        "hasServiceSpecification": "service.yaml",
+        "dependsOn": "tobaccoKnowledge",
+        "implementedBy": [
+          {
+            "@id": ".",
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"
+            ]
+          }
+        ]
+      }
     ],
-    "@context": [
-      "http://kgrid.org/koio/contexts/knowledgeobject.jsonld"
-    ],
+    "koio:hasKnowledge": {
+      "@id": "tobaccoKnowledge",
+      "@type": "function",
+      "implementedBy": [
+        "tobacco.js"
+      ]
+    },
     "status": "loaded",
     "error": "",
     "local_url": "tobacco"
