@@ -1,0 +1,22 @@
+{
+    "@id": "tobacco",
+    "@type": "koio:KnowledgeObject",
+    "identifier": "ark:tobacco",
+    "version": "1.0",
+    "title": "QALY Gain By Stop Using Tobacco",
+    "contributors": "Dr. John Doe",
+    "description": "Quality-Adjusted Life Year Gain By Stop Using Tobacco",
+    "keywords": [
+        "QALY",
+        "Tobacco"
+    ],
+    "citation":"https://pubmed.ncbi.nlm.nih.gov/a234567/",
+    "hasServiceSpecification": "service.yaml",
+    "hasDeploymentSpecification": "deployment.yaml",
+    "hasPayload": [
+        "tobacco.js"
+    ],
+    "@context": [
+        "http://kgrid.org/koio/contexts/knowledgeobject.jsonld"
+    ]
+}
