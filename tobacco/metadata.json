@@ -21,7 +21,7 @@
     "@type" : "koio:KnowledgeObject",
     "dc:title" : "QALY Gain By Stop Using Tobacco",
     "dc:identifier" : "ark:tobacco",
-    "version" : "1.1",
+    "version" : "1.2",
     "dc:description" : "Quality-Adjusted Life Year Gain By Stop Using Tobacco",
     "koio:contributors" : "Dr. John Doe",
     "koio:keywords" : [ "QALY", "Tobacco" ],
@@ -40,6 +40,11 @@
             ]
           }
         ]  
+      },
+      {
+        "@type":["cli","javascript"],
+        "dependsOn":"tobaccoKnowledge",
+        "implementedBy" : "cli.ts"
       }
     ],
     "koio:hasKnowledge":{

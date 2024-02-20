@@ -1,5 +1,5 @@
 # Quality-Adjusted Life Year Gain By Tobacco Cessation 
-Knowledge object (KO) implementation for Quality-Adjusted Life Year Gain By Tobacco Cessation using Kgrid 2.0 model.
+Knowledge object (KO) implementation for Quality-Adjusted Life Year Gain By Tobacco Cessation using KGrid 2.0 model.
 
 ## Publication
 Based on the work of Dr. John Doe. See publication here: [Quality-Adjusted Life Year Gain By Tobacco Cessation](https://pubmed.ncbi.nlm.nih.gov/a234567/).

@@ -41,6 +41,11 @@
             ]
           }
         ]
+      },
+      {
+        "@type":["cli","javascript"],
+        "dependsOn":"tobaccoKnowledge",
+        "implementedBy" : "cli.ts"
       }
     ],
     "koio:hasKnowledge": {
