@@ -21,7 +21,7 @@
     "@type" : "koio:KnowledgeObject",
     "dc:title" : "QALY Gain By Stop Using Tobacco",
     "dc:identifier" : "ark:tobacco",
-    "version" : "1.2",
+    "version" : "1.3",
     "dc:description" : "Quality-Adjusted Life Year Gain By Stop Using Tobacco",
     "koio:contributors" : "Dr. John Doe",
     "koio:keywords" : [ "QALY", "Tobacco" ],
@@ -29,11 +29,11 @@
     "koio:hasService":[      
       {
         "@type":"API",
-        "hasServiceSpecification":"service.yaml",
+        "hasServiceSpecification":"activator_service/service.yaml",
         "dependsOn":"tobaccoKnowledge",
         "implementedBy" : [
           {
-            "@id": ".",
+            "@id": "activator_service",
             "@type":[
               "https://kgrid.org/specs/activationSpec.html#object",
               "javascript"            
@@ -44,12 +44,12 @@
       {
         "@type":["cli","javascript"],
         "dependsOn":"tobaccoKnowledge",
-        "implementedBy" : "cli.ts"
+        "implementedBy" : "cli_service"
       }
     ],
     "koio:hasKnowledge":{
       "@id":"tobaccoKnowledge",
       "@type":"function",
-      "implementedBy" : ["tobacco.js"]
+      "implementedBy" : ["knowledge/tobacco.js"]
     }
   }

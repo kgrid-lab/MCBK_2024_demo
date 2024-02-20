@@ -2,5 +2,5 @@
   post:
     engine: 
       name: org.kgrid.javascript-activator
-      artifact: tobacco.js
-      function: tobaccoQALY
+      artifact: index.js
+      function: qalygain

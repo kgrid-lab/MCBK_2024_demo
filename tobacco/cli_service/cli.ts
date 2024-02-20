@@ -1,5 +1,5 @@
 import { Command } from "https://deno.land/x/cliffy@v1.0.0-rc.3/command/mod.ts";
-import {tobaccoQALY } from "./tobacco.js";
+import {tobaccoQALY } from "../knowledge/tobacco.js";
 import { parse } from "https://deno.land/std@0.177.0/encoding/csv.ts";
 import { writeCSV } from "https://deno.land/x/csv/mod.ts";
 

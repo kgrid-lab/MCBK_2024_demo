@@ -1,3 +1,4 @@
-## Tag 4.0 - Second service
-In this tag the CLI service is added as a second service to the tobacco knowledge object. 
+## Tag 5.0 - Restructuring 
+In this tag, the tobacco knowledge object (KO) is restructured to make it easier to maintain. 
 
+This restructuring is not enforced by KGrid model and it is done to demonstrate that the model does not limit KO developers to do it.  

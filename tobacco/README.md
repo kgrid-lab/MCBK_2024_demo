@@ -1,5 +1,5 @@
 # Quality-Adjusted Life Year Gain By Tobacco Cessation 
-Knowledge object (KO) implementation for Quality-Adjusted Life Year Gain By Tobacco Cessation using KGrid 2.0 model.
+Knowledge object (KO) implementation for Quality-Adjusted Life Year Gain By Tobacco Cessation using KGrid 2.0 model. This KO implements a CLI and an API service. 
 
 ## Publication
 Based on the work of Dr. John Doe. See publication here: [Quality-Adjusted Life Year Gain By Tobacco Cessation](https://pubmed.ncbi.nlm.nih.gov/a234567/).
@@ -9,7 +9,7 @@ Patient information containing:
 - Age: patient's age
 - Gender: patients gender (male: 0, female: 1) 
 - Smokeyear: number of years patient has been smoking
-- Cigpday: number of cigarettes patient smokes per day
+- Cigpday: number of cigateres patient smokes per day
 - Quityear: how many years ago patient has quit smoking (0 for current smokers)
 
 tobaccoQALY(age=65,gender=1,smokeyear=30,cigpday=20,quityear=0)= output: 6.142667499999999
@@ -39,8 +39,8 @@ POST 'http://{activator path}/endpoints/tobacco/qualy_gain'
       "post": {
         "engine": {
           "name": "org.kgrid.javascript-activator",
-          "artifact": "tobacco.js",
-          "function": "tobaccoQALY"
+          "artifact": "index.js",
+          "function": "qalygain"
         }
       }
     },

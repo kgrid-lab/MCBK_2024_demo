@@ -30,11 +30,11 @@
     "koio:hasService": [
       {
         "@type": "API",
-        "hasServiceSpecification": "service.yaml",
+        "hasServiceSpecification": "activator_service/service.yaml",
         "dependsOn": "tobaccoKnowledge",
         "implementedBy": [
           {
-            "@id": ".",
+            "@id": "activator_service",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
               "javascript"
@@ -45,14 +45,14 @@
       {
         "@type":["cli","javascript"],
         "dependsOn":"tobaccoKnowledge",
-        "implementedBy" : "cli.ts"
+        "implementedBy" : "cli_service"
       }
     ],
     "koio:hasKnowledge": {
       "@id": "tobaccoKnowledge",
       "@type": "function",
       "implementedBy": [
-        "tobacco.js"
+        "knowledge/tobacco.js"
       ]
     },
     "status": "loaded",
